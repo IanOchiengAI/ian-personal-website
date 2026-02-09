@@ -43,7 +43,8 @@ const milestones = [
         title: 'Pulse Studio',
         description: 'Founder & Identity Engineer',
         icon: Zap,
-        color: 'bg-cyan-400',
+        image: '/images/work/pulse.png', // Planned to add/link
+        color: 'bg-blue-600',
         side: 'left',
         active: true,
     },
