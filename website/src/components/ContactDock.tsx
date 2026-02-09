@@ -1,14 +1,18 @@
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, Palette } from 'lucide-react';
 
+interface ContactDockProps {
+    onOpenContact?: () => void;
+}
+
 const dockItems = [
-    { icon: Mail, label: 'Email', href: 'mailto:ian@ianochieng.ai' },
+    { icon: Mail, label: 'Email', action: 'contact' },
     { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/ian-ochieng-ai' },
     { icon: Github, label: 'GitHub', href: 'https://github.com/IanOchiengAI' },
     { icon: Palette, label: 'Behance', href: 'https://www.behance.net/ianwsochiengai' },
 ];
 
-export default function ContactDock() {
+export default function ContactDock({ onOpenContact }: ContactDockProps) {
     return (
         <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
             <motion.div
@@ -21,11 +25,12 @@ export default function ContactDock() {
                     <motion.a
                         key={item.label}
                         href={item.href}
-                        target={item.href.startsWith('http') ? '_blank' : undefined}
-                        rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        onClick={item.action === 'contact' ? (e) => { e.preventDefault(); onOpenContact?.(); } : undefined}
+                        target={item.href?.startsWith('http') ? '_blank' : undefined}
+                        rel={item.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
                         whileHover={{ scale: 1.2, y: -5 }}
                         whileTap={{ scale: 0.9 }}
-                        className="p-3 rounded-xl bg-white/40 hover:bg-white/80 transition-colors relative group"
+                        className="p-3 rounded-xl bg-white/40 hover:bg-white/80 transition-colors relative group cursor-pointer"
                         aria-label={item.label}
                     >
                         <item.icon className="w-6 h-6 text-slate-700" />
