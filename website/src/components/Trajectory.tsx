@@ -37,6 +37,14 @@ const milestones = [
         image: '/images/work/chai.png',
         color: 'bg-orange-500',
         side: 'right',
+    },
+    {
+        year: '2026',
+        title: 'Pulse Studio',
+        description: 'Founder & Identity Engineer',
+        icon: Zap,
+        color: 'bg-cyan-400',
+        side: 'left',
         active: true,
     },
 ];
