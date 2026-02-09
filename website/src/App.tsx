@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="relative">
-      <Header />
+      <Header onOpenContact={() => setIsContactOpen(true)} />
 
       <main>
         <Hero />
