@@ -18,7 +18,8 @@ interface SubFolder {
     details?: string[];
     showPricing?: boolean;
     isComingSoon?: boolean;
-    theme?: string; // Add theme for sub-folder highlights
+    theme?: string;
+    bgImage?: string;
 }
 
 interface EcosystemItem {
@@ -100,7 +101,8 @@ const ecosystemItems: EcosystemItem[] = [
                 description: 'Systematic breakdowns of AI agentics, business logic, and digital assets.',
                 link: 'https://www.youtube.com/@IanOchiengAI',
                 icon: Youtube,
-                theme: 'youtube-red'
+                theme: 'youtube-red',
+                bgImage: '/images/yt-ai-profile.jpg'
             },
             {
                 id: 'yt-channel-vinci',
@@ -109,7 +111,8 @@ const ecosystemItems: EcosystemItem[] = [
                 description: 'Cinematic soundscapes and the intersection of music and technology.',
                 link: 'https://www.youtube.com/@ViNciMusic254',
                 icon: Youtube,
-                theme: 'vinci-gold'
+                theme: 'vinci-gold',
+                bgImage: '/images/yt-vinci-profile.jpeg'
             },
             {
                 id: 'podcast-hub',
@@ -119,6 +122,7 @@ const ecosystemItems: EcosystemItem[] = [
                 link: '#',
                 icon: Mic,
                 theme: 'podcast-purple',
+                bgImage: '/images/before-agi-thumbnail.png',
                 details: [
                     'Conversations on the Frontier',
                     'Audio-First Insight',
@@ -133,7 +137,8 @@ const ecosystemItems: EcosystemItem[] = [
                 description: 'Analysis on the future of autonomous systems and identity.',
                 link: 'https://beforeagi.substack.com',
                 icon: BookOpen,
-                theme: 'substack-orange'
+                theme: 'substack-orange',
+                bgImage: '/images/substack-logo.png'
             }
         ]
     },
@@ -299,14 +304,28 @@ export default function Ecosystem({ onOpenPricing }: EcosystemProps) {
                                             else if (sub.link && sub.link !== '#') window.open(sub.link, '_blank');
                                         }}
                                         className={`glass-card p-8 border cursor-pointer flex flex-col justify-between group overflow-hidden relative ${sub.theme === 'behance-blue' ? 'border-blue-500/30' :
-                                                sub.theme === 'substack-orange' ? 'border-orange-500/30' :
-                                                    sub.theme === 'youtube-red' ? 'border-red-500/30' :
-                                                        sub.theme === 'vinci-gold' ? 'border-amber-500/30' :
-                                                            sub.theme === 'podcast-purple' ? 'border-purple-500/30' :
-                                                                'border-white/60 bg-white/40'
+                                            sub.theme === 'substack-orange' ? 'border-orange-500/30' :
+                                                sub.theme === 'youtube-red' ? 'border-red-500/30' :
+                                                    sub.theme === 'vinci-gold' ? 'border-amber-500/30' :
+                                                        sub.theme === 'podcast-purple' ? 'border-purple-500/30' :
+                                                            'border-white/60 bg-white/40'
                                             }`}
                                     >
-                                        {/* Brand Smidgen Background */}
+                                        {/* Background Image with Gradient Overlay */}
+                                        {sub.bgImage && (
+                                            <div className="absolute inset-0 z-0">
+                                                <img src={sub.bgImage} alt="" className="w-full h-full object-cover opacity-15" />
+                                                <div className={`absolute inset-0 ${sub.theme === 'youtube-red' ? 'bg-gradient-to-br from-white/90 via-white/80 to-red-50/70' :
+                                                        sub.theme === 'vinci-gold' ? 'bg-gradient-to-br from-white/90 via-white/80 to-amber-50/70' :
+                                                            sub.theme === 'podcast-purple' ? 'bg-gradient-to-br from-white/90 via-white/80 to-purple-50/70' :
+                                                                sub.theme === 'substack-orange' ? 'bg-gradient-to-br from-white/90 via-white/80 to-orange-50/70' :
+                                                                    sub.theme === 'behance-blue' ? 'bg-gradient-to-br from-white/90 via-white/80 to-blue-50/70' :
+                                                                        'bg-gradient-to-br from-white/90 via-white/85 to-white/80'
+                                                    }`} />
+                                            </div>
+                                        )}
+
+                                        {/* Brand Smidgen Glow */}
                                         {sub.theme === 'behance-blue' && (
                                             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-3xl -mr-16 -mt-16" />
                                         )}
@@ -326,20 +345,20 @@ export default function Ecosystem({ onOpenPricing }: EcosystemProps) {
                                         <div className="relative z-10">
                                             <div className="flex items-center justify-between mb-6">
                                                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${sub.theme === 'behance-blue' ? 'bg-[#0057ff] text-white' :
-                                                        sub.theme === 'substack-orange' ? 'bg-orange-600 text-white' :
-                                                            sub.theme === 'youtube-red' ? 'bg-[#FF0000] text-white' :
-                                                                sub.theme === 'vinci-gold' ? 'bg-amber-500 text-white' :
-                                                                    sub.theme === 'podcast-purple' ? 'bg-purple-600 text-white' :
-                                                                        'bg-slate-100 text-slate-600'
+                                                    sub.theme === 'substack-orange' ? 'bg-orange-600 text-white' :
+                                                        sub.theme === 'youtube-red' ? 'bg-[#FF0000] text-white' :
+                                                            sub.theme === 'vinci-gold' ? 'bg-amber-500 text-white' :
+                                                                sub.theme === 'podcast-purple' ? 'bg-purple-600 text-white' :
+                                                                    'bg-slate-100 text-slate-600'
                                                     }`}>
                                                     <sub.icon className="w-5 h-5" />
                                                 </div>
                                                 <span className={`text-[10px] font-bold uppercase tracking-widest ${sub.theme === 'behance-blue' ? 'text-blue-600' :
-                                                        sub.theme === 'substack-orange' ? 'text-orange-600' :
-                                                            sub.theme === 'youtube-red' ? 'text-red-600' :
-                                                                sub.theme === 'vinci-gold' ? 'text-amber-600' :
-                                                                    sub.theme === 'podcast-purple' ? 'text-purple-600' :
-                                                                        'text-slate-400'
+                                                    sub.theme === 'substack-orange' ? 'text-orange-600' :
+                                                        sub.theme === 'youtube-red' ? 'text-red-600' :
+                                                            sub.theme === 'vinci-gold' ? 'text-amber-600' :
+                                                                sub.theme === 'podcast-purple' ? 'text-purple-600' :
+                                                                    'text-slate-400'
                                                     }`}>{sub.subtitle}</span>
                                             </div>
                                             <h3 className="text-2xl font-bold text-slate-900 mb-3">{sub.title}</h3>
