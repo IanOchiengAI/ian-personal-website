@@ -8,15 +8,15 @@ const fadeInUp = {
 
 const ecosystemItems = [
     {
-        id: 'pulse',
-        title: 'Pulse Operations',
-        subtitle: 'CURRENT COMPANY',
-        description: 'Operationalizing AI for high-growth teams. Strategic pipelines and product delivery.',
+        id: 'pulse-studio',
+        title: 'Pulse Studio',
+        subtitle: 'FOUNDER • CURRENT',
+        description: 'Boutique digital studio building premium, personalized websites and practical AI products.',
         action: 'openPricing',
         icon: Sparkles,
         bgImage: '/images/ian-suit.jpeg',
         theme: 'blue',
-        aiInsight: 'Current mission: Automating high-friction client onboarding workflows.'
+        aiInsight: 'Current mission: Automating high-friction onboarding for premium web clients.'
     },
     {
         id: 'youtube-ai',
@@ -30,6 +30,17 @@ const ecosystemItems = [
         aiInsight: 'Primary channel for "low-friction" AI deployment tutorials.'
     },
     {
+        id: 'vinci-music',
+        title: 'ViNci Music',
+        subtitle: 'YOUTUBE • CREATIVE',
+        description: 'Where technical precision meets sonic artistry. Exploring the future of music.',
+        link: 'https://www.youtube.com/@ViNciMusicKE',
+        icon: Youtube, // Using Youtube icon as it's a channel
+        bgImage: '/images/ian-moody.jpeg',
+        theme: 'slate',
+        aiInsight: 'Leveraging AI for unique Kenyan sonic identity generation.'
+    },
+    {
         id: 'before-agi',
         title: 'Before AGI',
         subtitle: 'SUBSTACK',
@@ -39,17 +50,6 @@ const ecosystemItems = [
         bgImage: '/images/before-agi-workflow.png',
         theme: 'orange',
         aiInsight: 'Predicts the rise of "Identity-First" AI systems by 2027.'
-    },
-    {
-        id: 'behance',
-        title: 'Design Portfolio',
-        subtitle: 'CREATIVE DIRECTION',
-        description: 'UI/UX case studies and visual systems for AI-native platforms.',
-        link: 'https://www.behance.net/ianwsochiengai',
-        icon: Palette,
-        bgImage: null,
-        theme: 'slate',
-        aiInsight: 'Focuses on "Invisible UI" patterns for LLM-driven applications.'
     }
 ];
 
