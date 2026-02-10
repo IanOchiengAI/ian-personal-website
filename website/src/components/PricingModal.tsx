@@ -10,13 +10,14 @@ const tiers = [
     {
         name: 'Tier 00: The Starter',
         price: '$76',
-        subtitle: 'Ownership Asset',
-        description: 'Single-page high-speed landing. You own the code forever with zero ongoing hosting costs.',
+        subtitle: 'Own Your Digital Home',
+        description: 'Your professional digital business card. Pay once, own it forever. No monthly fees.',
         features: [
-            '1 Template Page (Antigravity Shell)',
-            '"Own the Code" — No subscriptions',
-            'Free Hosting Setup (Vercel)',
-            '2 Yr Domain Included (.com/.co.ke)'
+            '1 Professional Template Page',
+            'Custom Domain (2 Years Included)',
+            'Lifetime FREE Hosting',
+            'Mobile-Responsive Design',
+            'Zero Monthly Fees'
         ],
         icon: Coffee,
         color: 'bg-orange-100 text-orange-600',
@@ -25,13 +26,14 @@ const tiers = [
     {
         name: 'Tier 01: Identity',
         price: '$270 – $500',
-        subtitle: 'High-End Individual',
-        description: 'Bespoke custom landing for founders and creators with cinematic motion and premium UI.',
+        subtitle: 'Cinematic Personal Branding',
+        description: 'Stand out with a high-end, motion-rich site. Includes a professional email to build trust.',
         features: [
-            '1 Custom Page (Bento/Linear)',
-            'Advanced Hero Animation',
+            '1 Custom Designed Page',
+            'Cinematic Scroll Animations',
             'Interactive Experience Timeline',
-            'Clean "Mac-style" UI'
+            'Professional Email (1 Mailbox)',
+            'Google Analytics Setup'
         ],
         icon: Monitor,
         color: 'bg-blue-100 text-blue-600',
@@ -41,13 +43,14 @@ const tiers = [
     {
         name: 'Tier 02: Authority',
         price: '$650 – $1,430',
-        subtitle: 'The Professional',
-        description: 'Full-scale portfolio or agency site with editable content via a high-end CMS dashboard.',
+        subtitle: 'The Professional Portfolio',
+        description: 'A complete multi-page website depending on your content. You can edit text and images yourself.',
         features: [
             '3–5 Custom Pages',
-            'Custom CMS Integration (Sanity)',
-            'Content Dashboard for Client',
-            'Search Engine Optimization (SEO)'
+            'Self-Edit Logic (CMS)',
+            'Blog & Portfolio System',
+            'Professional Email (3 Mailboxes)',
+            'Advanced SEO Package'
         ],
         icon: Sparkles,
         color: 'bg-purple-100 text-purple-600',
@@ -56,28 +59,29 @@ const tiers = [
     {
         name: 'Tier 03: Logic',
         price: '$1,930+',
-        subtitle: 'Business Engine',
-        description: 'Complex logic engines for businesses requiring payments, lead gen, and CRM sync.',
+        subtitle: 'Enterprise Growth Engine',
+        description: 'Custom business software. Payments, user accounts, and automation built for your specific needs.',
         features: [
             '10+ High-Logic Pages',
-            'M-Pesa Integration (STK Push)',
-            'Custom Multi-step Lead Funnels',
-            'Full CRM & Database Sync'
+            'M-Pesa Payment Integration',
+            'Custom Lead Funnels',
+            'Professional Email (10 Mailboxes)',
+            'CRM & Database Sync'
         ],
         icon: Globe,
         color: 'bg-emerald-100 text-emerald-600',
         borderColor: 'border-emerald-100'
     },
     {
-        name: 'Tier 04: Discovery',
-        price: 'FREE',
-        subtitle: 'Consultation & Strategy',
-        description: '30-minute discovery call to align your vision with our technical execution roadmap.',
+        name: 'Tier 04: Maintenance',
+        price: '$25/mo',
+        subtitle: 'Peace of Mind (Optional)',
+        description: 'We handle the technical bits (updates, security, backups) so you can focus on work.',
         features: [
-            'Project Scope Assessment',
-            'Technical Feasibility Check',
-            'Identity Architecture Audit',
-            'Phased Roadmap Delivery'
+            'Proactive Hosting Monitoring',
+            'Security & Code Updates',
+            '1 Content Update/Month',
+            'Priority Email Support'
         ],
         icon: Sparkles,
         color: 'bg-slate-100 text-slate-600',

@@ -52,14 +52,14 @@ const ecosystemItems: EcosystemItem[] = [
                 id: 'web-dev',
                 title: 'Web Engineering',
                 subtitle: 'PORTFOLIOS • ENGINES',
-                description: 'Bespoke, high-performance web products with $0 monthly hosting.',
+                description: 'Bespoke, ownership-first web products. Pay once, own forever.',
                 icon: Monitor,
                 theme: 'tech-blue',
                 details: [
                     'Personalized UI/UX Design',
                     'Next.js / Vite Performance',
                     'Zero-Latency Deployment',
-                    'M-Pesa / Payment Logic'
+                    'Professional Email Setup'
                 ],
                 showPricing: true
             },
