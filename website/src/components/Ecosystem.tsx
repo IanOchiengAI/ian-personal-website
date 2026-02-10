@@ -109,7 +109,7 @@ const ecosystemItems: EcosystemItem[] = [
                 title: 'ViNci Music',
                 subtitle: 'CREATIVE • SOUND',
                 description: 'Cinematic soundscapes and the intersection of music and technology.',
-                link: 'https://www.youtube.com/@ViNciMusic254',
+                link: 'https://www.youtube.com/@ViNciMusicKE',
                 icon: Youtube,
                 theme: 'vinci-gold',
                 bgImage: '/images/yt-vinci-profile.jpeg'
@@ -119,7 +119,7 @@ const ecosystemItems: EcosystemItem[] = [
                 title: 'Before AGI Podcast',
                 subtitle: 'AUDIO • DIALOGUE',
                 description: 'The audio companion to the Substack. Conversations on the frontier.',
-                link: '#',
+                link: 'https://open.spotify.com/show/61nALQpyoTFVf0kW2y5HCa?si=ec7c972379014491',
                 icon: Mic,
                 theme: 'podcast-purple',
                 bgImage: '/images/before-agi-thumbnail.png',
@@ -128,14 +128,14 @@ const ecosystemItems: EcosystemItem[] = [
                     'Audio-First Insight',
                     'Guest Architects'
                 ],
-                isComingSoon: true
+                isComingSoon: false
             },
             {
                 id: 'before-agi-reads',
                 title: 'Before AGI Reads',
                 subtitle: 'SUBSTACK POSTS',
                 description: 'Analysis on the future of autonomous systems and identity.',
-                link: 'https://beforeagi.substack.com',
+                link: 'https://ianochiengai.substack.com/',
                 icon: BookOpen,
                 theme: 'substack-orange',
                 bgImage: '/images/substack-logo.png'
