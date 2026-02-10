@@ -40,11 +40,11 @@ const milestones = [
     },
     {
         year: '2026',
-        title: 'Pulse Studio',
-        description: 'Founder & Identity Engineer',
+        title: 'Pulse 254',
+        description: 'Founder & Cultural Architect',
         icon: Zap,
-        image: '/images/work/pulse.png', // Planned to add/link
-        color: 'bg-blue-600',
+        image: '/images/work/pulse.png',
+        color: 'bg-cyan-400',
         side: 'left',
         active: true,
     },

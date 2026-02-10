@@ -16,10 +16,11 @@ This is the agent configuration for **Ian's Personal Website**.
 
 Add brand-specific directives in `directives/` folder:
 
-- Design preferences
+- Design preferences (Cyber-Organic, Cyan/Lime)
 - Color schemes
 - Content requirements
 - Deployment targets
+- **Pulse Studio Operations**: See [pulse-studio-operations.md](file:///c:/Users/User/Desktop/Projects/Ian%20Personal%20Website/directives/pulse-studio-operations.md) for agency business logic and brand DNA.
 
 ### Directory Structure
 
