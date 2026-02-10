@@ -8,8 +8,11 @@ import ContactDock from './components/ContactDock';
 import PortfolioFolder from './components/PortfolioFolder';
 import ContactModal from './components/ContactModal';
 
+import PricingModal from './components/PricingModal';
+
 function App() {
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+  const [isPricingOpen, setIsPricingOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
@@ -18,15 +21,14 @@ function App() {
 
       <main>
         <Hero />
-        {/* Ecosystem no longer triggers portfolio directly (moved to Products), 
-            but kept the prop just in case we add it back or for other links */}
-        <Ecosystem />
+        <Ecosystem onOpenPricing={() => setIsPricingOpen(true)} />
         <Trajectory />
         <Products onOpenPortfolio={() => setIsPortfolioOpen(true)} />
       </main>
 
       <ContactDock onOpenContact={() => setIsContactOpen(true)} />
       <PortfolioFolder isOpen={isPortfolioOpen} onClose={() => setIsPortfolioOpen(false)} />
+      <PricingModal isOpen={isPricingOpen} onClose={() => setIsPricingOpen(false)} />
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {/* Background Gradients */}

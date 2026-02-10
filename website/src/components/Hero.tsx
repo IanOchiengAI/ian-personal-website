@@ -15,21 +15,22 @@ export default function Hero() {
                     >
                         {/* Eyebrow */}
                         <div className="flex items-center gap-2 text-slate-500 text-sm font-medium tracking-wide">
-                            <span className="w-2 h-2 rounded-full bg-primary-500" />
-                            SYSTEM ARCHITECT • STRATEGIST
+                            <span className="w-2 h-2 rounded-full bg-blue-600" />
+                            PRACTICAL AI SOLUTIONS
                         </div>
 
                         {/* Headline */}
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight">
-                            Intelligence,
+                            I build practical
                             <br />
-                            <span className="text-primary-500">Operationalized.</span>
+                            <span className="text-blue-600">AI products</span> that
+                            <br />
+                            solve real-world problems.
                         </h1>
 
                         {/* Subhead */}
-                        <p className="text-lg text-slate-500 max-w-lg leading-relaxed">
-                            Deploying Human-Centric AI Solutions for the African Market.
-                            Building systems that understand context, culture, and capability.
+                        <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-light">
+                            Moving beyond the hype to deploy functional, context-aware systems that drive actual business value. No fluff, just code and results.
                         </p>
 
                         {/* Badge */}
