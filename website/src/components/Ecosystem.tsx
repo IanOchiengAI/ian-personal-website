@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Youtube, Music, BookOpen, ArrowUpRight, Palette, Sparkles } from 'lucide-react';
 
