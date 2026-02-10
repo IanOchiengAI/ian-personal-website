@@ -314,13 +314,13 @@ export default function Ecosystem({ onOpenPricing }: EcosystemProps) {
                                         {/* Background Image with Gradient Overlay */}
                                         {sub.bgImage && (
                                             <div className="absolute inset-0 z-0">
-                                                <img src={sub.bgImage} alt="" className="w-full h-full object-cover opacity-15" />
+                                                <img src={sub.bgImage} alt="" className="w-full h-full object-cover opacity-40" />
                                                 <div className={`absolute inset-0 ${sub.theme === 'youtube-red' ? 'bg-gradient-to-br from-white/90 via-white/80 to-red-50/70' :
-                                                        sub.theme === 'vinci-gold' ? 'bg-gradient-to-br from-white/90 via-white/80 to-amber-50/70' :
-                                                            sub.theme === 'podcast-purple' ? 'bg-gradient-to-br from-white/90 via-white/80 to-purple-50/70' :
-                                                                sub.theme === 'substack-orange' ? 'bg-gradient-to-br from-white/90 via-white/80 to-orange-50/70' :
-                                                                    sub.theme === 'behance-blue' ? 'bg-gradient-to-br from-white/90 via-white/80 to-blue-50/70' :
-                                                                        'bg-gradient-to-br from-white/90 via-white/85 to-white/80'
+                                                    sub.theme === 'vinci-gold' ? 'bg-gradient-to-br from-white/90 via-white/80 to-amber-50/70' :
+                                                        sub.theme === 'podcast-purple' ? 'bg-gradient-to-br from-white/90 via-white/80 to-purple-50/70' :
+                                                            sub.theme === 'substack-orange' ? 'bg-gradient-to-br from-white/90 via-white/80 to-orange-50/70' :
+                                                                sub.theme === 'behance-blue' ? 'bg-gradient-to-br from-white/90 via-white/80 to-blue-50/70' :
+                                                                    'bg-gradient-to-br from-white/90 via-white/85 to-white/80'
                                                     }`} />
                                             </div>
                                         )}

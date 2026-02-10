@@ -9,12 +9,12 @@ interface PricingModalProps {
 const tiers = [
     {
         name: 'Tier 00: The Starter',
-        price: 'KES 10,000',
+        price: '$76',
         subtitle: 'Ownership Asset',
-        description: 'Single-page high-speed landing. You own the code forever. Zero ongoing hosting costs.',
+        description: 'Single-page high-speed landing. You own the code forever with zero ongoing hosting costs.',
         features: [
             '1 Template Page (Antigravity Shell)',
-            '"Own the Code" - No subscriptions',
+            '"Own the Code" — No subscriptions',
             'Free Hosting Setup (Vercel)',
             '2 Yr Domain Included (.com/.co.ke)'
         ],
@@ -24,9 +24,9 @@ const tiers = [
     },
     {
         name: 'Tier 01: Identity',
-        price: 'KES 35K - 65K',
+        price: '$270 – $500',
         subtitle: 'High-End Individual',
-        description: 'Bespoke custom landing for founders and creators. High aesthetic and cinematic movement.',
+        description: 'Bespoke custom landing for founders and creators with cinematic motion and premium UI.',
         features: [
             '1 Custom Page (Bento/Linear)',
             'Advanced Hero Animation',
@@ -40,11 +40,11 @@ const tiers = [
     },
     {
         name: 'Tier 02: Authority',
-        price: 'KES 85K - 185K',
+        price: '$650 – $1,430',
         subtitle: 'The Professional',
-        description: 'Full-scale portfolio or agency site with editable content via high-end CMS.',
+        description: 'Full-scale portfolio or agency site with editable content via a high-end CMS dashboard.',
         features: [
-            '3-5 Custom Pages',
+            '3–5 Custom Pages',
             'Custom CMS Integration (Sanity)',
             'Content Dashboard for Client',
             'Search Engine Optimization (SEO)'
@@ -55,7 +55,7 @@ const tiers = [
     },
     {
         name: 'Tier 03: Logic',
-        price: 'KES 250K+',
+        price: '$1,930+',
         subtitle: 'Business Engine',
         description: 'Complex logic engines for businesses requiring payments, lead gen, and CRM sync.',
         features: [
@@ -159,7 +159,7 @@ export default function PricingModal({ isOpen, onClose }: PricingModalProps) {
                                             </div>
                                         </div>
 
-                                        <p className="text-sm text-slate-500 mb-8 font-light leading-relaxed h-[60px] line-clamp-3">
+                                        <p className="text-sm text-slate-500 mb-8 font-light leading-relaxed">
                                             {tier.description}
                                         </p>
 
