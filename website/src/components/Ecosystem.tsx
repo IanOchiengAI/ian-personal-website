@@ -1,12 +1,58 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Youtube, Music, BookOpen, ArrowUpRight, Palette } from 'lucide-react';
+import { Youtube, Music, BookOpen, ArrowUpRight, Palette, Sparkles } from 'lucide-react';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 };
 
-
+const ecosystemItems = [
+    {
+        id: 'youtube-ai',
+        title: 'Ian Ochieng AI',
+        subtitle: 'YOUTUBE • TECH',
+        description: 'AI tutorials, system design breakdowns, and insights for emerging markets.',
+        link: 'https://www.youtube.com/@IanOchiengAI',
+        icon: Youtube,
+        bgImage: '/images/ian-artistic.jpeg',
+        theme: 'red',
+        aiInsight: 'Focuses on "low-friction" AI deployment in resource-constrained environments.'
+    },
+    {
+        id: 'vinci-music',
+        title: 'ViNci Music',
+        subtitle: 'YOUTUBE • MUSIC',
+        description: 'Where technology meets artistry.',
+        link: 'https://www.youtube.com/@ViNciMusicKE',
+        icon: Music,
+        bgImage: '/images/ian-moody.jpeg',
+        theme: 'slate',
+        aiInsight: 'Exploring the intersection of generative AI and Kenyan sonic identities.'
+    },
+    {
+        id: 'before-agi',
+        title: 'Before AGI',
+        subtitle: 'SUBSTACK',
+        description: 'Long-form essays on the future of human-machine collaboration.',
+        link: 'https://beforeagi.substack.com',
+        icon: BookOpen,
+        bgImage: '/images/before-agi-workflow.png',
+        theme: 'orange',
+        aiInsight: 'Predicts a shift from "AI Tools" to "Autonomous Identity Systems" by 2027.'
+    },
+    {
+        id: 'behance',
+        title: 'My Design Work',
+        subtitle: 'PORTFOLIO • DESIGN',
+        description: 'Visual identity, UI/UX case studies, and creative direction.',
+        link: 'https://www.behance.net/ianwsochiengai',
+        icon: Palette,
+        bgImage: null,
+        theme: 'blue',
+        aiInsight: 'Utilizes AI to automate repetitive UI patterns, freeing time for core strategy.'
+    }
+];
 
 export default function Ecosystem() {
     return (
@@ -31,179 +77,97 @@ export default function Ecosystem() {
 
                 {/* Bento Grid - 2x2 Layout */}
                 <div className="grid md:grid-cols-2 gap-6 auto-rows-[minmax(300px,auto)]">
-
-                    {/* Card 1: Ian Ochieng AI (YouTube) - TOP LEFT */}
-                    <motion.a
-                        href="https://www.youtube.com/@IanOchiengAI"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeInUp}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        whileHover={{ y: -5 }}
-                        className="glass-card p-8 group cursor-pointer relative overflow-hidden flex flex-col justify-between"
-                    >
-                        {/* Background Image - Artistic with Red Gradient */}
-                        <div className="absolute inset-0 z-0">
-                            <img
-                                src="/images/ian-artistic.jpeg"
-                                alt="Ian Ochieng Tech"
-                                className="w-full h-full object-cover opacity-60 mix-blend-overlay"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-r from-red-900/90 via-red-800/80 to-slate-900/40" />
-                        </div>
-
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-3 text-red-200 text-sm font-medium mb-4">
-                                <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center backdrop-blur-sm">
-                                    <Youtube className="w-4 h-4 text-white" />
+                    {ecosystemItems.map((item, idx) => (
+                        <motion.a
+                            key={item.id}
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={fadeInUp}
+                            transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            whileHover={{ y: -5 }}
+                            className={`glass-card p-8 group cursor-pointer relative overflow-hidden flex flex-col justify-between ${item.theme === 'blue' ? 'bg-blue-600' : ''
+                                }`}
+                        >
+                            {/* Background Elements */}
+                            {item.bgImage && (
+                                <div className="absolute inset-0 z-0">
+                                    <img
+                                        src={item.bgImage}
+                                        alt={item.title}
+                                        className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${item.id === 'before-agi' ? 'opacity-10' : 'opacity-60 mix-blend-overlay'
+                                            }`}
+                                    />
+                                    <div className={`absolute inset-0 ${item.theme === 'red' ? 'bg-gradient-to-r from-red-900/90 via-red-800/80 to-slate-900/40' :
+                                        item.theme === 'slate' ? 'bg-gradient-to-t from-slate-900/90 via-slate-800/50 to-transparent' :
+                                            item.theme === 'orange' ? 'bg-gradient-to-br from-orange-50 via-white to-orange-50/50' :
+                                                ''
+                                        }`} />
                                 </div>
-                                YOUTUBE • TECH
-                            </div>
+                            )}
+                            {item.theme === 'blue' && (
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 z-0" />
+                            )}
 
-                            <h3 className="text-3xl font-semibold text-white mb-3">Ian Ochieng AI</h3>
-                            <p className="text-red-100/80 mb-6 max-w-md">
-                                AI tutorials, system design breakdowns, and insights for emerging markets.
-                            </p>
-                        </div>
+                            <div className="relative z-10">
+                                <div className="flex items-center justify-between mb-4">
+                                    <div className={`flex items-center gap-3 text-sm font-medium ${item.theme === 'orange' ? 'text-orange-600' :
+                                        item.theme === 'blue' ? 'text-blue-200' :
+                                            item.theme === 'red' ? 'text-red-200' : 'text-pink-300'
+                                        }`}>
+                                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center backdrop-blur-sm ${item.theme === 'orange' ? 'bg-orange-100' : 'bg-white/10'
+                                            }`}>
+                                            <item.icon className={`w-4 h-4 ${item.theme === 'red' ? 'text-white' : ''}`} />
+                                        </div>
+                                        {item.subtitle}
+                                    </div>
 
-                        <div className="relative z-10 mt-auto">
-                            <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all">
-                                Watch Tutorials
-                                <ArrowUpRight className="w-4 h-4 link-arrow" />
-                            </span>
-                        </div>
-                    </motion.a>
-
-                    {/* Card 2: ViNci Music - TOP RIGHT */}
-                    <motion.a
-                        href="https://www.youtube.com/@ViNciMusicKE"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeInUp}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        whileHover={{ y: -5 }}
-                        className="music-card p-8 rounded-3xl group cursor-pointer relative overflow-hidden min-h-[400px] flex flex-col"
-                    >
-                        {/* Background Image - Moody */}
-                        <img
-                            src="/images/ian-moody.jpeg"
-                            alt="ViNci Music"
-                            className="absolute inset-0 w-full h-full object-cover"
-                        />
-                        {/* Gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-800/50 to-transparent z-10" />
-
-                        <div className="relative z-20 h-full flex flex-col justify-between">
-                            <div className="flex items-center gap-3 text-pink-300 text-sm font-medium mb-4">
-                                <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center backdrop-blur-sm">
-                                    <Music className="w-4 h-4" />
+                                    {/* AI Insight Badge */}
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 backdrop-blur-md"
+                                    >
+                                        <Sparkles className="w-3 h-3 text-primary-400" />
+                                        <span className="text-[10px] font-bold text-white tracking-wider">AI INSIGHT</span>
+                                    </motion.div>
                                 </div>
-                                YOUTUBE • MUSIC
-                            </div>
 
-                            <div>
-                                <h3 className="text-3xl font-semibold text-white mb-3">ViNci Music</h3>
-                                <p className="text-slate-300 mb-6 font-light">
-                                    Where technology meets artistry.
+                                <h3 className={`text-3xl font-semibold mb-3 ${item.theme === 'orange' ? 'text-slate-900' : 'text-white'
+                                    }`}>
+                                    {item.title}
+                                </h3>
+
+                                <p className={`mb-6 max-w-md ${item.theme === 'orange' ? 'text-slate-500' :
+                                    item.theme === 'red' ? 'text-red-100/80' :
+                                        item.theme === 'blue' ? 'text-blue-100/80' : 'text-slate-300 font-light'
+                                    }`}>
+                                    {item.description}
                                 </p>
 
-                                <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all">
-                                    Listen
+                                {/* AI Intelligence Reveal */}
+                                <div className="mt-4 overflow-hidden h-0 group-hover:h-auto transition-all duration-300 opacity-0 group-hover:opacity-100">
+                                    <div className={`p-4 rounded-xl border border-white/10 ${item.theme === 'orange' ? 'bg-orange-100/50 text-orange-900' : 'bg-white/5 text-white'
+                                        } text-xs leading-relaxed italic`}>
+                                        <Sparkles className="w-4 h-4 mb-2 opacity-50" />
+                                        "{item.aiInsight}"
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="relative z-10 mt-auto pt-6">
+                                <span className={`inline-flex items-center gap-2 font-medium group-hover:gap-3 transition-all ${item.theme === 'orange' ? 'text-orange-600' : 'text-white'
+                                    }`}>
+                                    {item.id === 'vinci-music' ? 'Listen' :
+                                        item.id === 'before-agi' ? 'Read Analysis' :
+                                            item.id === 'behance' ? 'View on Behance' : 'Watch Tutorials'}
                                     <ArrowUpRight className="w-4 h-4 link-arrow" />
                                 </span>
                             </div>
-                        </div>
-                    </motion.a>
-
-                    {/* Card 3: Before AGI (Substack) - BOTTOM LEFT */}
-                    <motion.a
-                        href="https://beforeagi.substack.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeInUp}
-                        transition={{ duration: 0.5, delay: 0.3 }}
-                        whileHover={{ y: -5 }}
-                        className="glass-card p-8 group cursor-pointer relative overflow-hidden flex flex-col justify-between"
-                    >
-                        {/* Substack orange aesthetic */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50/50" />
-
-                        {/* Background Image Hint */}
-                        <img
-                            src="/images/before-agi-workflow.png"
-                            className="absolute right-0 top-0 h-full w-2/3 object-cover opacity-10 mask-image-linear-to-l"
-                            style={{ maskImage: 'linear-gradient(to left, black, transparent)' }}
-                        />
-
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-3 text-orange-600 text-sm font-medium mb-4">
-                                <div className="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center">
-                                    <BookOpen className="w-4 h-4" />
-                                </div>
-                                SUBSTACK
-                            </div>
-
-                            <h3 className="text-2xl font-semibold mb-3">Before AGI</h3>
-                            <p className="text-slate-500 mb-4">
-                                Long-form essays on the future of human-machine collaboration.
-                            </p>
-                        </div>
-
-                        <div className="relative z-10 mt-auto">
-                            <span className="inline-flex items-center gap-2 text-orange-600 font-medium group-hover:gap-3 transition-all">
-                                Read Analysis
-                                <ArrowUpRight className="w-4 h-4 link-arrow" />
-                            </span>
-                        </div>
-                    </motion.a>
-
-                    {/* Card 4: Behance (Design) - BOTTOM RIGHT - NEW */}
-                    <motion.a
-                        href="https://www.behance.net/ianwsochiengai"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeInUp}
-                        transition={{ duration: 0.5, delay: 0.4 }}
-                        whileHover={{ y: -5 }}
-                        className="glass-card p-8 group cursor-pointer relative overflow-hidden flex flex-col justify-between bg-blue-600"
-                    >
-                        {/* Behance Blue aesthetic */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800" />
-
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-3 text-blue-200 text-sm font-medium mb-4">
-                                <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center backdrop-blur-sm">
-                                    <Palette className="w-4 h-4 text-white" />
-                                </div>
-                                PORTFOLIO • DESIGN
-                            </div>
-
-                            <h3 className="text-2xl font-semibold text-white mb-3">My Design Work</h3>
-                            <p className="text-blue-100/80 mb-4">
-                                Visual identity, UI/UX case studies, and creative direction.
-                            </p>
-                        </div>
-
-                        <div className="relative z-10 mt-auto">
-                            <span className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-3 transition-all">
-                                View on Behance
-                                <ArrowUpRight className="w-4 h-4 link-arrow" />
-                            </span>
-                        </div>
-                    </motion.a>
-
+                        </motion.a>
+                    ))}
                 </div>
             </div>
         </section>

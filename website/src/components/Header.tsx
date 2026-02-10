@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Home, Briefcase, Play, Mail } from 'lucide-react';
+import { Home, Briefcase, Play, Mail, FileDown } from 'lucide-react';
 
 interface HeaderProps {
     onOpenContact?: () => void;
@@ -9,6 +9,7 @@ const navItems = [
     { icon: Home, label: 'Home', href: '#home' },
     { icon: Briefcase, label: 'Work', href: '#ecosystem' },
     { icon: Play, label: 'Content', href: '#trajectory' },
+    { icon: FileDown, label: 'Resume', href: '/Ian_Ochieng_CV.pdf', download: true },
     { icon: Mail, label: 'Contact', action: 'contact' },
 ];
 
@@ -35,6 +36,8 @@ export default function Header({ onOpenContact }: HeaderProps) {
                         <a
                             key={item.label}
                             href={item.href}
+                            download={item.download ? 'Ian_Ochieng_CV.pdf' : undefined}
+                            target={item.download ? '_blank' : undefined}
                             onClick={item.action === 'contact' ? (e) => { e.preventDefault(); onOpenContact?.(); } : undefined}
                             className="p-2 text-slate-500 hover:text-slate-800 transition-colors rounded-lg hover:bg-slate-100"
                             title={item.label}
