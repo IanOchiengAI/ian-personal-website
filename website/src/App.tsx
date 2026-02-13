@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Ecosystem from './components/Ecosystem';
 import Trajectory from './components/Trajectory';
 import Products from './components/Products';
+import Footer from './components/Footer';
 import ContactDock from './components/ContactDock';
 import PortfolioFolder from './components/PortfolioFolder';
 import ContactModal from './components/ContactModal';
@@ -26,6 +27,8 @@ function App() {
         <Products onOpenPortfolio={() => setIsPortfolioOpen(true)} />
       </main>
 
+      <Footer onOpenContact={() => setIsContactOpen(true)} />
+
       <ContactDock onOpenContact={() => setIsContactOpen(true)} />
       <PortfolioFolder isOpen={isPortfolioOpen} onClose={() => setIsPortfolioOpen(false)} />
       <PricingModal isOpen={isPricingOpen} onClose={() => setIsPricingOpen(false)} />
@@ -40,3 +43,4 @@ function App() {
 }
 
 export default App;
+

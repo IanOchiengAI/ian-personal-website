@@ -109,20 +109,20 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         <div className="p-4 bg-slate-50/50 border-b border-slate-100 flex gap-2">
                             <button
                                 onClick={() => setMode('standard')}
-                                className={`flex - 1 py - 2 px - 3 rounded - lg text - xs font - bold transition - all flex items - center justify - center gap - 2 ${mode === 'standard'
-                                        ? 'bg-white shadow-sm border border-slate-200 text-slate-900'
-                                        : 'text-slate-400 hover:text-slate-600'
-                                    } `}
+                                className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${mode === 'standard'
+                                    ? 'bg-white shadow-sm border border-slate-200 text-slate-900'
+                                    : 'text-slate-400 hover:text-slate-600'
+                                    }`}
                             >
                                 <Send className="w-3 h-3" />
                                 STANDARD
                             </button>
                             <button
                                 onClick={() => setMode('strategist')}
-                                className={`flex - 1 py - 2 px - 3 rounded - lg text - xs font - bold transition - all flex items - center justify - center gap - 2 ${mode === 'strategist'
-                                        ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                                        : 'text-slate-400 hover:text-slate-600'
-                                    } `}
+                                className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2 ${mode === 'strategist'
+                                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
+                                    : 'text-slate-400 hover:text-slate-600'
+                                    }`}
                             >
                                 <Sparkles className="w-3 h-3" />
                                 AI STRATEGIST
@@ -227,7 +227,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
                                             <div className="flex gap-1.5">
                                                 {strategistSteps.map((_, i) => (
-                                                    <div key={i} className={`h - 1 rounded - full transition - all ${i === step ? 'w-6 bg-blue-600' : 'w-2 bg-slate-200'} `} />
+                                                    <div key={i} className={`h-1 rounded-full transition-all ${i === step ? 'w-6 bg-blue-600' : 'w-2 bg-slate-200'}`} />
                                                 ))}
                                             </div>
 

@@ -177,7 +177,7 @@ export default function PricingModal({ isOpen, onClose }: PricingModalProps) {
                                         </ul>
 
                                         <button
-                                            onClick={() => window.open('https://wa.me/254700000000', '_blank')}
+                                            onClick={() => window.open('https://wa.me/254713812392', '_blank')}
                                             className={`w-full py-4 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-all ${tier.recommended
                                                 ? 'bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-500/20'
                                                 : 'bg-slate-900 text-white hover:bg-slate-800'

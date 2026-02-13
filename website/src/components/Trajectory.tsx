@@ -30,7 +30,7 @@ const milestones = [
         side: 'left',
     },
     {
-        year: '2026',
+        year: '2025',
         title: 'CHAI Hackathon',
         description: 'Winner',
         icon: Trophy,

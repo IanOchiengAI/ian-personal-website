@@ -41,7 +41,7 @@ export default function Hero() {
                         >
                             <span className="gold-badge">
                                 <Trophy className="w-4 h-4" />
-                                2026 CHAI HACKATHON WINNER
+                                2025 CHAI HACKATHON WINNER
                             </span>
                         </motion.div>
                     </motion.div>
@@ -63,7 +63,7 @@ export default function Hero() {
                         <div className="glass-card p-6 relative overflow-hidden">
                             <img
                                 src="/images/ian-suit.jpeg"
-                                alt="Ian Ochieng - System Architect & Strategist"
+                                alt="Ian Ochieng - AI Solutions Engineer"
                                 className="aspect-[4/5] w-full object-cover rounded-2xl"
                             />
                         </div>

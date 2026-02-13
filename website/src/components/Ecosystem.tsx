@@ -64,25 +64,15 @@ const ecosystemItems: EcosystemItem[] = [
                 showPricing: true
             },
             {
-                id: 'behance-link',
-                title: 'Behance Portfolio',
+                id: 'instagram-link',
+                title: 'Instagram',
                 subtitle: 'VISUAL SHOWCASE',
-                description: 'Explore our cinematic visual identities and premium brand systems.',
-                link: 'https://www.behance.net/ianochieng',
+                description: 'Behind-the-scenes of our creative process and premium brand systems.',
+                link: 'https://www.instagram.com/ianochiengai/',
                 icon: Palette,
-                theme: 'behance-blue'
+                theme: 'instagram-pink'
             }
         ]
-    },
-    {
-        id: 'content-repurposing',
-        title: 'Content Engine',
-        subtitle: 'REPURPOSING • GROWTH',
-        description: 'Transforming long-form knowledge into high-impact visual assets for LinkedIn and X.',
-        icon: Sparkles,
-        bgImage: '/images/before-agi-workflow.png',
-        theme: 'earth',
-        aiInsight: 'Converting intellectual depth into cultural reach through AI-assisted repurposing.'
     },
     {
         id: 'pulse-studio',
@@ -303,7 +293,7 @@ export default function Ecosystem({ onOpenPricing }: EcosystemProps) {
                                             if (sub.showPricing) onOpenPricing();
                                             else if (sub.link && sub.link !== '#') window.open(sub.link, '_blank');
                                         }}
-                                        className={`glass-card p-8 border cursor-pointer flex flex-col justify-between group overflow-hidden relative ${sub.theme === 'behance-blue' ? 'border-blue-500/30' :
+                                        className={`glass-card p-8 border cursor-pointer flex flex-col justify-between group overflow-hidden relative ${sub.theme === 'instagram-pink' ? 'border-pink-500/30' :
                                             sub.theme === 'substack-orange' ? 'border-orange-500/30' :
                                                 sub.theme === 'youtube-red' ? 'border-red-500/30' :
                                                     sub.theme === 'vinci-gold' ? 'border-amber-500/30' :
@@ -319,15 +309,15 @@ export default function Ecosystem({ onOpenPricing }: EcosystemProps) {
                                                     sub.theme === 'vinci-gold' ? 'bg-gradient-to-br from-white/90 via-white/80 to-amber-50/70' :
                                                         sub.theme === 'podcast-purple' ? 'bg-gradient-to-br from-white/90 via-white/80 to-purple-50/70' :
                                                             sub.theme === 'substack-orange' ? 'bg-gradient-to-br from-white/90 via-white/80 to-orange-50/70' :
-                                                                sub.theme === 'behance-blue' ? 'bg-gradient-to-br from-white/90 via-white/80 to-blue-50/70' :
+                                                                sub.theme === 'instagram-pink' ? 'bg-gradient-to-br from-white/90 via-white/80 to-pink-50/70' :
                                                                     'bg-gradient-to-br from-white/90 via-white/85 to-white/80'
                                                     }`} />
                                             </div>
                                         )}
 
                                         {/* Brand Smidgen Glow */}
-                                        {sub.theme === 'behance-blue' && (
-                                            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-3xl -mr-16 -mt-16" />
+                                        {sub.theme === 'instagram-pink' && (
+                                            <div className="absolute top-0 right-0 w-32 h-32 bg-pink-600/5 blur-3xl -mr-16 -mt-16" />
                                         )}
                                         {sub.theme === 'substack-orange' && (
                                             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-600/5 blur-3xl -mr-16 -mt-16" />
@@ -344,7 +334,7 @@ export default function Ecosystem({ onOpenPricing }: EcosystemProps) {
 
                                         <div className="relative z-10">
                                             <div className="flex items-center justify-between mb-6">
-                                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${sub.theme === 'behance-blue' ? 'bg-[#0057ff] text-white' :
+                                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${sub.theme === 'instagram-pink' ? 'bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#dc2743] text-white' :
                                                     sub.theme === 'substack-orange' ? 'bg-orange-600 text-white' :
                                                         sub.theme === 'youtube-red' ? 'bg-[#FF0000] text-white' :
                                                             sub.theme === 'vinci-gold' ? 'bg-amber-500 text-white' :
@@ -353,7 +343,7 @@ export default function Ecosystem({ onOpenPricing }: EcosystemProps) {
                                                     }`}>
                                                     <sub.icon className="w-5 h-5" />
                                                 </div>
-                                                <span className={`text-[10px] font-bold uppercase tracking-widest ${sub.theme === 'behance-blue' ? 'text-blue-600' :
+                                                <span className={`text-[10px] font-bold uppercase tracking-widest ${sub.theme === 'instagram-pink' ? 'text-pink-600' :
                                                     sub.theme === 'substack-orange' ? 'text-orange-600' :
                                                         sub.theme === 'youtube-red' ? 'text-red-600' :
                                                             sub.theme === 'vinci-gold' ? 'text-amber-600' :
