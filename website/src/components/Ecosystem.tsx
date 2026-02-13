@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Youtube, ArrowUpRight, Palette, Sparkles, ShoppingBag, BookOpen, Mic, ArrowLeft, Monitor, Info, Check } from 'lucide-react';
+import { Youtube, ArrowUpRight, Palette, Sparkles, BookOpen, Mic, ArrowLeft, Monitor, Info, Check } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useState } from 'react';
 
@@ -131,18 +131,6 @@ const ecosystemItems: EcosystemItem[] = [
                 bgImage: '/images/substack-logo.png'
             }
         ]
-    },
-    {
-        id: 'pulse-merch',
-        title: 'Pulse Merch',
-        subtitle: 'GOODS • COMING SOON',
-        description: 'The physical pulse. Premium streetwear for the Digital Architect.',
-        link: '#',
-        icon: ShoppingBag,
-        bgImage: 'https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=2070&auto=format&fit=crop',
-        theme: 'slate',
-        aiInsight: 'Extending digital identity into physical brand equity. Launching soon.',
-        isComingSoon: true
     }
 ];
 

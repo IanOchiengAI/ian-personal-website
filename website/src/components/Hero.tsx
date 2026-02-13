@@ -30,7 +30,7 @@ export default function Hero() {
 
                         {/* Subhead */}
                         <p className="text-lg text-slate-500 max-w-lg leading-relaxed font-light">
-                            Moving beyond the hype to deploy functional, context-aware systems that drive actual business value. No fluff, just code and results.
+                            Moving beyond the hype to deploy functional, context-aware systems that drive actual business value.
                         </p>
 
                         {/* Badge */}

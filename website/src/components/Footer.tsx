@@ -33,7 +33,7 @@ export default function Footer({ onOpenContact }: FooterProps) {
                     <div className="space-y-4">
                         <h3 className="text-2xl font-semibold tracking-tight">Ian Ochieng.</h3>
                         <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-                            Building practical AI products that solve real-world problems. No fluff, just code and results.
+                            Building practical AI products that solve real-world problems.
                         </p>
                         <button
                             onClick={onOpenContact}
